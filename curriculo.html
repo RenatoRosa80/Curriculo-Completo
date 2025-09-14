@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currículo — Renato Rosa dos Santos Filho</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====== VARIÁVEIS DE TEMA ====== */
+    :root {
+      --bg: #f5f8fa;
+      --card: #ffffff;
+      --text: #1c2a35;
+      --muted: #5f6c74;
+      --accent: #2959a7;
+      --accent-2: #6c5ce7;
+      --chip-bg: #eaf4ff;
+      --chip-text: #2266cc;
+    }
+    [data-theme="dark"] {
+      --bg: #0e141a;
+      --card: #101820;
+      --text: #e6eef6;
+      --muted: #9fb1c0;
+      --accent: #4da3ff;
+      --accent-2: #8c7ae6;
+      --chip-bg: rgba(77,163,255,0.08);
+      --chip-text: #9fd0ff;
+    }
+
+    /* ====== RESET ====== */
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+      transition: background .3s ease, color .3s ease;
+    }
+
+    /* ====== LAYOUT ====== */
+    .wrap {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 22px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      padding: 22px;
+      transition: background .3s ease;
+    }
+    header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    header p.sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ====== LINKS ====== */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ====== SECTIONS ====== */
+    .section-title {
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    h3.entry {
+      font-size: 15px;
+      margin: 6px 0;
+      font-weight: 600;
+    }
+    ul { margin-left: 18px; margin-bottom: 12px; }
+    ul li { margin-bottom: 6px; font-size: 14px; color: var(--muted); }
+
+    /* ====== CHIPS ====== */
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .chip {
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ====== TOPO ====== */
+    .topbar {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+    .controls { display: flex; gap: 10px; align-items: center; }
+    .btn, .lang-btn {
+      border: none;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      font-size: 13px;
+      transition: all .2s;
+    }
+    .btn:hover, .lang-btn:hover { opacity: .85; }
+    .lang-btn.active {
+      background: var(--accent-2);
+      color: #fff;
+    }
+
+    @media (max-width: 880px) {
+      .wrap { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <div class="topbar">
+    <div>
+      <strong style="color:var(--accent)">Currículo Moderno</strong>
+    </div>
+    <div class="controls">
+      <div>
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+      <button id="themeToggle" class="btn">🌙 / ☀️</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- COLUNA ESQUERDA -->
+    <div class="card">
+      <header>
+        <h1>Renato Rosa dos Santos Filho</h1>
+        <p class="sub">Biomédico • Especialista em Laboratório • IT Support Customer</p>
+      </header>
+
+      <div class="section-title">Contato</div>
+      <p>📍 Rio de Janeiro - RJ</p>
+      <p>📱 +55 21 97396-9501</p>
+      <p>📧 <a href="mailto:renato.rosa.filho@email.com">renato.rosa.filho@email.com</a></p>
+      <p>🔗 <a href="https://github.com/renato-github" target="_blank">GitHub</a> | 
+         <a href="https://linkedin.com/in/renato-linkedin" target="_blank">LinkedIn</a></p>
+
+      <div class="section-title">Idiomas</div>
+      <div class="chips">
+        <span class="chip">Português – Nativo</span>
+        <span class="chip">Inglês – C1</span>
+        <span class="chip">Alemão – B2</span>
+      </div>
+
+      <div class="section-title">Competências</div>
+      <ul>
+        <li>Python (scripts e manutenção)</li>
+        <li>Frontend & Backend (HTML, CSS, JS)</li>
+        <li>Kibana, Confluence, JSON</li>
+        <li>Automação laboratorial</li>
+        <li>Controle de Qualidade (GMP/GLP)</li>
+        <li>Gestão de Equipamentos</li>
+      </ul>
+    </div>
+
+    <!-- COLUNA DIREITA -->
+    <div class="card">
+      <!-- BLOCO PORTUGUÊS -->
+      <div class="lang-block" data-lang="pt">
+        <div class="section-title">Experiência Profissional</div>
+        <h3 class="entry">Jun 2022 – Atual — IT Support Customer | Labdock (Alemanha) & Labtechnologies (Suíça)</h3>
+        <ul>
+          <li>Manutenção básica de códigos Python</li>
+          <li>Atualização do sistema em construção</li>
+          <li>Criação de regras em Python</li>
+          <li>Desenvolvimento básico de Frontend e Backend</li>
+          <li>Treinamento de novos usuários</li>
+          <li>Conhecimento em Kibana, Confluence e JSON</li>
+        </ul>
+
+        <h3 class="entry">Jan 2021 – Dez 2021 — Biomédico | Laboratório MDI Limbach</h3>
+        <ul>
+          <li>Análises em química clínica e imuno-hematologia</li>
+          <li>Calibração de equipamentos automatizados</li>
+        </ul>
+
+        <div class="section-title">Formação Acadêmica</div>
+        <ul>
+          <li>Bacharelado em Ciências Biomédicas — Diagnóstico Clínico (2002 – 2006)</li>
+          <li>Curso Tecnológico em Full Stack Web Development — Senac (2023–2026) | Linguagens: Python, JavaScript</li>
+        </ul>
+      </div>
+
+      <!-- BLOCO INGLÊS -->
+      <div class="lang-block" data-lang="en" style="display:none">
+        <div class="section-title">Professional Experience</div>
+        <h3 class="entry">Jun 2022 – Present — IT Support Customer | Labdock (Germany) & Labtechnologies (Switzerland)</h3>
+        <ul>
+          <li>Basic Python code maintenance</li>
+          <li>System updates under development</li>
+          <li>Rule creation in Python</li>
+          <li>Basic Frontend and Backend development</li>
+          <li>User training</li>
+        </ul>
+
+        <div class="section-title">Education</div>
+        <ul>
+          <li>Bachelor in Biomedical Sciences — Clinical Diagnosis (2002 – 2006)</li>
+          <li>Technological Course in Full Stack Web Development — Senac (2023–2026) | Languages: Python, JavaScript</li>
+        </ul>
+      </div>
+
+      <!-- BLOCO ALEMÃO -->
+      <div class="lang-block" data-lang="de" style="display:none">
+        <div class="section-title">Berufserfahrung</div>
+        <h3 class="entry">Jun 2022 – Gegenwärtig — IT Support Customer | Labdock (Deutschland) & Labtechnologies (Schweiz)</h3>
+        <ul>
+          <li>Grundlegende Python-Codewartung</li>
+          <li>Systemaktualisierung im Aufbau</li>
+          <li>Regelerstellung in Python</li>
+          <li>Basis-Frontend und Backend-Entwicklung</li>
+        </ul>
+
+        <div class="section-title">Ausbildung</div>
+        <ul>
+          <li>Bachelor in Biomedizinischen Wissenschaften — Klinische Diagnose (2002 – 2006)</li>
+          <li>Technologischer Kurs in Full Stack Webentwicklung — Senac (2023–2026) | Sprachen: Python, JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dark/Light Mode
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const current = body.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', next);
+    });
+
+    // Language Switch
+    const buttons = document.querySelectorAll('.lang-btn');
+    const blocks = document.querySelectorAll('.lang-block');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.getAttribute('data-lang');
+        blocks.forEach(block => {
+          block.style.display = block.getAttribute('data-lang') === lang ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
